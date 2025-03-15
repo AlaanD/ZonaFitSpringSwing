@@ -132,7 +132,12 @@ public class ZonaFitForma extends JFrame{
 
             cliente.setMembresia(membresia);
             clienteServicio.guardarCliente(cliente);
-            mostrarMensaje("Cliente guardado exitosamente");
+
+            if(idCliente != null)
+                mostrarMensaje("Cliente actualizado");
+            else
+                mostrarMensaje("Cliente guardado exitosamente");
+
             limpiarFormulario();
             listarClientes();
 
@@ -152,6 +157,7 @@ public class ZonaFitForma extends JFrame{
         this.nombreTexto.setText("");
         this.apellidoTexto.setText("");
         this.membresiaTexto.setText("");
+        this.clientesTabla.getSelectionModel().clearSelection();
     }
 
     private void cargarClienteSeleccionado(){

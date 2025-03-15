@@ -188,6 +188,7 @@ public class ZonaFitForma extends JFrame{
             Cliente cliente = new Cliente();
             cliente.setId(idCliente);
             clienteServicio.eliminarCliente(cliente);
+            mostrarMensaje("Cliente con id " + idCliente + " eliminado");
             listarClientes();
             limpiarFormulario();
         }else
